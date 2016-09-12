@@ -1,0 +1,245 @@
+@font-face{
+	font-family: Laconic;
+	src: url(../fonts/Laconic_Regular.otf) format("opentype");
+}
+body{
+	background-color: white;
+	font-family: Laconic;
+}
+
+h1,h2,h3,h4,h5{
+	color:black;
+}
+
+#logo1{
+	width:450px;
+	height: 130px;
+	padding:10px;
+}
+
+.form{
+	border: 3px solid #CC191D;
+	margin: 40px 150px 0px 150;
+	background: white;
+}
+
+.form-content{
+	margin: 50px 200px;
+}
+
+/*label {*/
+/*  position:absolute;*/
+/*  transform:translateY(6px);*/
+/*  left:13px;*/
+/*  color:rgba($white,.5);*/
+/*  transition:all 0.25s ease;*/
+/*  -webkit-backface-visibility: hidden;*/
+/*  pointer-events: none;*/
+/*  font-size:22px;*/
+/*  .req {*/
+/*  	margin:2px;*/
+/*  	color:$main;*/
+/*  }*/
+/*}*/
+label {
+  margin: .5px;
+}
+
+/*label.active {*/
+/*  transform:translateY(50px);*/
+/*  left:2px;*/
+/*  font-size:14px;*/
+/*  .req {*/
+/*    opacity:0;*/
+/*  }*/
+/*}*/
+
+/*label.highlight {*/
+/*	color:$white;*/
+/*}*/
+
+input[type=text],input[type=number],input[type=date],input[type=email], textarea{
+  -webkit-transition: 0.30s ease;
+  -moz-transition: 0.30s ease;
+  -ms-transition: 0.30s ease;
+  -o-transition: 0.30s ease;
+  font-family: Laconic;
+  font-size: 15px;
+  width:100%;
+  background: none;
+  outline: none;
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #CC191D;
+  border-radius: 2px;
+  color:#CC191D;
+}
+
+/*input[type=checkbox],input[type=radio]{*/
+/*	margin:4px 0 0;margin-top:1px;*/
+/*}*/
+
+input[type=submit]{
+  	-webkit-transition: 0.30s ease;
+  	-moz-transition: 0.30s ease;
+  	-ms-transition: 0.30s ease;
+  	-o-transition: 0.30s ease;
+	margin:10px;
+	padding:10px;
+	border:1px solid #CC191D;
+	background:#CC191D;
+	color: white;
+	font-size: 18px;
+	width: 200px;
+	outline:none;
+}
+
+input[type=submit]:hover{
+	-webkit-transition: 0.30s ease;
+  	-moz-transition: 0.30s ease;
+  	-ms-transition: 0.30s ease;
+  	-o-transition: 0.30s ease;
+	color:white;
+	background: #8A1212;
+	box-shadow: 0 0 5px #CC191D;
+	border:1.7px solid #CC191D;
+}
+
+/*input['text']:focus,input['number']:focus,input['date']:focus,input['email']:focus{*/
+	/*box-shadow: 0 0 5px #CC191D;*/
+	/*border:1.7px solid #CC191D;*/
+/*  border-color: rgba(126, 239, 104, 0.8);*/
+/*  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(126, 239, 104, 0.6);*/
+/*  outline: 0 none;*/
+/*}*/
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {   
+  border-color: #CC191D;
+  box-shadow: 0 1px 1px #CC191D inset, 0 0 8px #CC191D;
+  outline: 0 none;
+}
+
+.form-control {
+  border:1px solid #CC191D;
+}
+
+.form-control:focus {
+    border-color: #CC191D;
+    outline: #CC191D;
+    -webkit-box-shadow: inset 0 1px 1px #CC191D,0 0 8px #CC191D;
+    box-shadow: inset 0 1px 1px #CC191D,0 0 8px #CC191D;
+}
+
+.bootstrap-select .btn:focus {
+    outline: none !important;
+}
+
+fieldset[disabled], .disabled{
+  border:1px solid gray;
+  background-color: silver;
+}
+
+/*RESPONSIVE*/
+
+@media only screen and (max-width:1200px){
+	#logo1{
+		display: block;
+		width:650px;	
+		height:200px;
+	}
+	
+	.form{
+  	border: 3px solid #CC191D;
+  	/*margin: 20px 150px 30px 150px;*/
+  	margin: 20px 150px 0px 150;
+  	background: white;
+  }
+}
+
+@media only screen and (max-width:1024px){
+	#logo1{
+		display: block;
+		width:430px;	
+		height:130px;
+	}
+	
+	.form{
+  	border: none;
+  	/*margin: 20px 150px 30px 150px;*/
+  	
+}
+
+@media only screen and (max-width:990px){
+	#logo1{
+		display: block;
+		width:250px;	
+		height:85px;
+	}
+	
+	.form{
+  	border: 3px solid #CC191D;
+  	/*margin: 20px 150px 30px 150px;*/
+  	margin: 20px 150px 0px 150;
+  	background: white;
+  }
+}
+
+@media only screen and (max-width:600px){
+	#logo1{
+	    display: none;
+	}
+	
+	.form{
+	  margin-top:10px;
+  	border: 3px solid #CC191D;
+  	/*margin: 20px 150px 30px 150px;*/
+  	margin: 20px 150px 0px 150;
+  	background: white;
+  }
+}
+
+@media only screen and (max-device-width:480px){
+/* styles for mobile browsers smaller than 480px; (iPhone) */
+	#logo1{
+	    display: block;
+	    width: 300px;
+	    height: 100px;
+	}
+	
+  .form{
+  	border: none;
+  	/*margin: 20px 150px 30px 150px;*/
+  	margin: 0px;
+  	background: white;
+  }
+}
+
+@media only screen and (device-width:768px){
+    /* default iPad screens */
+  #logo1{
+	 	display: block;
+	  width:600px;
+		height:160px;
+	}
+	
+  .form{
+  	border: none;
+  	/*margin: 20px 150px 30px 150px;*/
+  	margin: 0px;
+  	background: white;
+  }
+}

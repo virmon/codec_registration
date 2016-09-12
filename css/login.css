@@ -1,0 +1,82 @@
+#login-btn{
+	color:white;
+	background-color:#CC191D;
+	border: 1px solid black;
+	width:100px;
+}
+
+#login-btn:hover{
+	background-color: #8A1212;
+}
+
+#logo1{
+	display: block;
+	width:900px;
+	height:250px;
+}
+
+#logo2{
+   display: none;
+}
+
+@media only screen and (max-width:1200px){
+	#logo1{
+		display: block;
+		width:800px;	
+		height:250px;
+	}
+
+	#logo2{
+		display: none;
+	}
+}
+
+@media only screen and (max-width:990px){
+	#logo1{
+		display: block;
+		width:500px;	
+		height:150px;
+	}
+
+	#logo2{
+		display: none;
+	}
+}
+
+@media only screen and (max-width:600px){
+	#logo1{
+	    display: none;
+	}
+
+	#logo2{
+	    display: block;
+	    width:250px;
+		height:250px;
+	}
+}
+
+@media only screen and (max-device-width:480px){
+/* styles for mobile browsers smaller than 480px; (iPhone) */
+	#logo1{
+	    display: none;
+	}
+
+	#logo2{
+	    display: block;
+	    width:250px;
+		height:250px;
+	}
+}
+
+@media only screen and (device-width:768px){
+    /* default iPad screens */
+    #logo1{
+	 	display: block;
+	 	width:600px;	
+	 	height:150px;
+	}
+
+	#logo2{
+	    display: none;
+	}
+}
