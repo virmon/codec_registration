@@ -16,22 +16,22 @@
 			<!--Form Body-->
 			<div class="">
 			  <form action="php/register.php" method="POST">
-          <div class="form-group">
+          <div class="form-group row">
             <div class="col-sm-3"><label>Student Number</label><input type="number"min="0" maxlength="10" class="form-control" name="student_no" placeholder="Ex. 2013010101" autocomplete="off" required autofocus></div>
             <div class="col-sm-3"><label>First Name</label><input type="text" class="form-control" name="firstname" placeholder="Ex. Juan" autocomplete="off" required></div>
             <div class="col-sm-3"><label>Last Name</label><input type="text" class="form-control" name="lastname" placeholder="Ex. Dela Cruz" autocomplete="off" required></div>
             <div class="col-sm-3"><label>Middle Initial</label><input type="text" class="form-control" name="middlename" placeholder="Ex. F" autocomplete="off" required></div>
           </div>
-          <div class="form-group">
+          <div class="form-group row">
             <div class="col-sm-4"><label>Year-Course-Section</label><input type="text" class="form-control" name="section" placeholder="Ex. 4ISA" autocomplete="off" required></div>
             <div class="col-sm-4"><label>Birthdate</label><input type="date" class="form-control" name="birthdate" placeholder="Ex. 01/01/1611" autocomplete="off" required></div>
-            <div class="col-sm-4"><label>Home Address</label><input type="text" class="form-control" name="address" placeholder="Ex. Espana, Manila" autocomplete="off" required></div>
+            <!-- <div class="col-sm-4"><label>Home Address</label><input type="text" class="form-control" name="address" placeholder="Ex. Espana, Manila" autocomplete="off" required></div> -->
           </div>
-          <div class="form-group">
+          <div class="form-group row">
             <div class="col-sm-6"><label>Cellphone Number</label><input type="number" min="0" maxlength="11" class="form-control" name="contact" placeholder="Ex. 09011231212" autocomplete="off" required></div>
             <div class="col-sm-6"><label>E-mail Address</label><input type="email" class="form-control" name="email" placeholder="Ex. codecuste@gmail.com" autocomplete="off" required></div>
           </div>
-          <div class="form-group col-sm-12">
+          <div class="form-group row">
 					  <div class="col-sm-12"><label>What do you want to apply for?</label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 							<label class="radio-inline"><input type="radio" id="member" name="apply" value="member" required checked>Membership</label>
   					  <label class="radio-inline"><input type="radio" id="ea" name="apply" value="EA" required>Executive Associate</label>
@@ -101,7 +101,7 @@
               <option value="Tech">Technologies</option>
             </select>
           </div> -->
-					<div class="col-sm-12">
+					<div class="form-group row">
 					  <div class="col-sm-12"><label>Have you joined any Hackathons?</label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						<label class="radio-inline"><input type="radio" name="hackathon" value="Yes" required>Yes</label>
             <label class="radio-inline"><input type="radio" name="hackathon" value="No" required>No</label>
