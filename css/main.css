@@ -1,10 +1,10 @@
 @font-face{
-	font-family: Laconic;
-	src: url(../fonts/Laconic_Regular.otf) format("opentype");
+	/*font-family: Laconic;
+	src: url(../fonts/Laconic_Regular.otf) format("opentype");*/
 }
 body{
 	background-color: white;
-	font-family: Laconic;
+	/*font-family: Laconic;*/
 }
 
 h1,h2,h3,h4,h5{
@@ -12,8 +12,7 @@ h1,h2,h3,h4,h5{
 }
 
 #logo1{
-	width:450px;
-	height: 130px;
+	height: 180px;
 	padding:10px;
 }
 
@@ -63,7 +62,7 @@ input[type=text],input[type=number],input[type=date],input[type=email], textarea
   -moz-transition: 0.30s ease;
   -ms-transition: 0.30s ease;
   -o-transition: 0.30s ease;
-  font-family: Laconic;
+  /*font-family: Laconic;*/
   font-size: 15px;
   width:100%;
   background: none;
@@ -127,7 +126,7 @@ input[type="url"]:focus,
 input[type="search"]:focus,
 input[type="tel"]:focus,
 input[type="color"]:focus,
-.uneditable-input:focus {   
+.uneditable-input:focus {
   border-color: #CC191D;
   box-shadow: 0 1px 1px #CC191D inset, 0 0 8px #CC191D;
   outline: 0 none;
@@ -158,10 +157,10 @@ fieldset[disabled], .disabled{
 @media only screen and (max-width:1200px){
 	#logo1{
 		display: block;
-		width:650px;	
+		width:650px;
 		height:200px;
 	}
-	
+
 	.form{
   	border: 3px solid #CC191D;
   	/*margin: 20px 150px 30px 150px;*/
@@ -173,23 +172,23 @@ fieldset[disabled], .disabled{
 @media only screen and (max-width:1024px){
 	#logo1{
 		display: block;
-		width:430px;	
+		width:430px;
 		height:130px;
 	}
-	
+
 	.form{
   	border: none;
   	/*margin: 20px 150px 30px 150px;*/
-  	
+
 }
 
 @media only screen and (max-width:990px){
 	#logo1{
 		display: block;
-		width:250px;	
+		width:250px;
 		height:85px;
 	}
-	
+
 	.form{
   	border: 3px solid #CC191D;
   	/*margin: 20px 150px 30px 150px;*/
@@ -202,7 +201,7 @@ fieldset[disabled], .disabled{
 	#logo1{
 	    display: none;
 	}
-	
+
 	.form{
 	  margin-top:10px;
   	border: 3px solid #CC191D;
@@ -219,7 +218,7 @@ fieldset[disabled], .disabled{
 	    width: 300px;
 	    height: 100px;
 	}
-	
+
   .form{
   	border: none;
   	/*margin: 20px 150px 30px 150px;*/
@@ -235,7 +234,7 @@ fieldset[disabled], .disabled{
 	  width:600px;
 		height:160px;
 	}
-	
+
   .form{
   	border: none;
   	/*margin: 20px 150px 30px 150px;*/
