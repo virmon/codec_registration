@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 20, 2016 at 03:58 AM
+-- Generation Time: Sep 21, 2016 at 03:54 PM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.5.35
 
@@ -23,36 +23,16 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ea_applicants`
---
-
-CREATE TABLE `ea_applicants` (
-  `ea_applicant_id` int(11) NOT NULL,
-  `student_number` varchar(100) NOT NULL,
-  `last_name` varchar(100) NOT NULL,
-  `first_name` varchar(100) NOT NULL,
-  `middle_name` varchar(100) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `contact` varchar(100) NOT NULL,
-  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `section` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `members`
 --
 
 CREATE TABLE `members` (
   `members_id` int(4) UNSIGNED ZEROFILL NOT NULL,
-  `membership_no` int(11) DEFAULT NULL,
   `student_no` varchar(20) NOT NULL,
   `firstname` varchar(45) NOT NULL,
   `middlename` varchar(45) NOT NULL,
   `lastname` varchar(45) NOT NULL,
   `birthdate` date NOT NULL,
-  `address` varchar(45) NOT NULL,
   `contact` varchar(20) NOT NULL,
   `email` varchar(45) NOT NULL,
   `section` varchar(20) NOT NULL,
@@ -61,23 +41,41 @@ CREATE TABLE `members` (
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `members`
+--
+
+INSERT INTO `members` (`members_id`, `student_no`, `firstname`, `middlename`, `lastname`, `birthdate`, `contact`, `email`, `section`, `apply`, `hackathon`, `timestamp`) VALUES
+(0001, '2015081787', 'Bien Joseph', 'P.', 'Jocson', '1997-12-08', '09273265998', 'bienjocson1997@gmail.com', '2CSB', 'member', 'No', '2016-09-21 13:46:41');
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `staff_applicants`
+-- Table structure for table `unpaid`
 --
 
-CREATE TABLE `staff_applicants` (
-  `staff_applicant_id` int(11) NOT NULL,
-  `student_number` varchar(100) NOT NULL,
-  `last_name` varchar(100) NOT NULL,
-  `first_name` varchar(100) NOT NULL,
-  `middle_name` varchar(100) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `contact` varchar(100) NOT NULL,
-  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `section` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE `unpaid` (
+  `unpaid_id` int(4) UNSIGNED ZEROFILL NOT NULL,
+  `student_no` varchar(20) NOT NULL,
+  `firstname` varchar(45) NOT NULL,
+  `middlename` varchar(45) NOT NULL,
+  `lastname` varchar(45) NOT NULL,
+  `birthdate` date NOT NULL,
+  `contact` varchar(20) NOT NULL,
+  `email` varchar(45) NOT NULL,
+  `section` varchar(20) NOT NULL,
+  `apply` varchar(20) NOT NULL,
+  `hackathon` varchar(10) NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `unpaid`
+--
+
+INSERT INTO `unpaid` (`unpaid_id`, `student_no`, `firstname`, `middlename`, `lastname`, `birthdate`, `contact`, `email`, `section`, `apply`, `hackathon`, `timestamp`) VALUES
+(0001, '2015081734', 'Mark Samuel', 'C.', 'Nicasio', '1998-11-23', '09326795015', 'marksamuel.nicasio@gmail.com', '2 IS B', 'member', 'No', '2016-09-21 13:43:28'),
+(0002, '2013056698', 'Chelsea', 'D.', 'Pagtananan', '1997-04-02', '09172406192', '2013056698@ust-ics.mygbiz.com', '4ISC', 'member', 'No', '2016-09-21 13:44:58');
 
 -- --------------------------------------------------------
 
@@ -106,22 +104,16 @@ INSERT INTO `users` (`user_id`, `username`, `email`, `password`, `role`, `timest
 --
 
 --
--- Indexes for table `ea_applicants`
---
-ALTER TABLE `ea_applicants`
-  ADD PRIMARY KEY (`ea_applicant_id`);
-
---
 -- Indexes for table `members`
 --
 ALTER TABLE `members`
   ADD PRIMARY KEY (`members_id`);
 
 --
--- Indexes for table `staff_applicants`
+-- Indexes for table `unpaid`
 --
-ALTER TABLE `staff_applicants`
-  ADD PRIMARY KEY (`staff_applicant_id`);
+ALTER TABLE `unpaid`
+  ADD PRIMARY KEY (`unpaid_id`);
 
 --
 -- Indexes for table `users`
@@ -134,20 +126,15 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT for table `ea_applicants`
---
-ALTER TABLE `ea_applicants`
-  MODIFY `ea_applicant_id` int(11) NOT NULL AUTO_INCREMENT;
---
 -- AUTO_INCREMENT for table `members`
 --
 ALTER TABLE `members`
-  MODIFY `members_id` int(4) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT;
+  MODIFY `members_id` int(4) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT for table `staff_applicants`
+-- AUTO_INCREMENT for table `unpaid`
 --
-ALTER TABLE `staff_applicants`
-  MODIFY `staff_applicant_id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `unpaid`
+  MODIFY `unpaid_id` int(4) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `users`
 --
