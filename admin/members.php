@@ -1,7 +1,7 @@
 <?php
   include("../php/user_session.php");
 
-  $sql = "SELECT student_no, concat(lastname, ', ', firstname, ' ', middlename) as name, section, contact, email, birthdate, address, apply, first, second, hackathon, timestamp FROM members;";
+  $sql = "SELECT student_no, concat(lastname, ', ', firstname, ' ', middlename) as name, section, contact, email, birthdate, apply, hackathon, timestamp FROM members;";
   $result = $mysqli->query($sql);
 ?>
 
@@ -30,6 +30,7 @@
 
         <!-- Menu Items -->
         <div class="nav navbar-nav">
+          <li class=""><a href="unpaid.php">Unpaid</a></li>
           <li class="active"><a href="members.php">Members</a></li>
         </div>
 
@@ -76,7 +77,7 @@
                   <td><?php echo $row['contact'] ?></td>
                   <td><?php echo $row['email'] ?></td>
                   <td><?php echo $row['timestamp'] ?></td>
-                  <td><a href="" onclick="viewMember(<?php echo $row['student_no'] ?>,'<?php echo $row['name'] ?>','<?php echo $row['section'] ?>','<?php echo $row['contact'] ?>','<?php echo $row['email'] ?>','<?php echo $row['birthdate'] ?>','<?php echo $row['address'] ?>','<?php echo $row['apply'] ?>','<?php echo $row['first'] ?>','<?php echo $row['second'] ?>','<?php echo $row['hackathon'] ?>','<?php echo $row['timestamp'] ?>')" data-toggle="modal" data-target="#viewMemberModal">View</a></td>
+                  <td><a href="" onclick="viewMember(<?php echo $row['student_no'] ?>,'<?php echo $row['name'] ?>','<?php echo $row['section'] ?>','<?php echo $row['contact'] ?>','<?php echo $row['email'] ?>','<?php echo $row['birthdate'] ?>','<?php echo $row['apply'] ?>','<?php echo $row['first'] ?>','<?php echo $row['second'] ?>','<?php echo $row['hackathon'] ?>','<?php echo $row['timestamp'] ?>')" data-toggle="modal" data-target="#viewMemberModal">View</a></td>
                 </tr>
           <?php
               }
@@ -116,10 +117,6 @@
                 <tr>
                   <td>Birthdate:</td>
                   <td id="view_birthdate"></td>
-                </tr>
-                <tr>
-                  <td>Address:</td>
-                  <td id="view_address"></td>
                 </tr>
                 <tr>
                   <td>Membership:</td>
@@ -163,17 +160,14 @@
         });
       });
 
-      function viewMember(student_no, name, section, contact, email, birthdate, address, membership, first, second, hackathon, timestamp){
+      function viewMember(student_no, name, section, contact, email, birthdate, membership, hackathon, timestamp){
         document.getElementById("view_student_no").textContent = student_no;
         document.getElementById("view_name").textContent = name;
         document.getElementById("view_section").textContent = section;
         document.getElementById("view_contact").textContent = contact;
         document.getElementById("view_email").textContent = email;
         document.getElementById("view_birthdate").textContent = birthdate;
-        document.getElementById("view_address").textContent = address;
         document.getElementById("view_membership").textContent = membership;
-        document.getElementById("view_first").textContent = first;
-        document.getElementById("view_second").textContent = second;
         document.getElementById("view_hackthon").textContent = hackathon;
         document.getElementById("view_timestamp").textContent = timestamp;
       }

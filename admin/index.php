@@ -4,7 +4,7 @@
   session_start();
 
   if(isset($_SESSION['user_id'])){
-     header("location: members.php");
+     header("location: unpaid.php");
   }
 
   if(isset($_POST["login"])) {
@@ -23,7 +23,7 @@
    if($count == 1) {
       $_SESSION['user_id'] = $row['user_id'];
 
-      header("location: members.php");
+      header("location: unpaid.php");
    }else {
       $error = "<p style='color:red;text-align:center'>Your Login Name or Password is invalid</p>";
    }
