@@ -112,7 +112,8 @@
     <script type="text/javascript">
       $(document).ready(function(){
         $('#myTable').DataTable({
-          responsive: true
+          responsive: true,
+          "order": [[0, "desc"]]
         });
       });
     </script>
